@@ -1,2 +1,1 @@
-# ittplanner
-Incremental Topology Transformation Planner
+# Incremental Topology Transformation Planner
