@@ -1,0 +1,5 @@
+__pycache__
+gurobi.log
+loc.sh
+workspace.xml
+stats.txt
