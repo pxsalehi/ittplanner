@@ -125,12 +125,16 @@ def create_parser():
                       help='maximum broker children for generated topologies')
     parser.add_option('--search-space', type='string', dest='search_space', default=search_space_default,
                       help='type of search space: all, all_paths, each_path, each_subtree')
-    parser.add_option('--plan-len-start', type='int', dest='plan_len_start', default=plan_len_start_default)
-    parser.add_option('--plan-len-inc', type='int', dest='plan_len_inc', default=plan_len_inc_default)
+    parser.add_option('--plan-len-start', type='int', dest='plan_len_start', default=plan_len_start_default,
+                      help='initial length of plan')
+    parser.add_option('--plan-len-inc', type='int', dest='plan_len_inc', default=plan_len_inc_default,
+                      help='increment plan length upon infeasible plan')
     parser.add_option('--action-cost', type='string', dest='action_cost_model', default=action_cost_default,
                       help='action cost model: fixed, random, runtime')
-    parser.add_option('--write-model', action='store_true', dest='write_model', default=False)
-    parser.add_option('--compute-iis', action='store_true', dest='compute_iis', default=False)
+    parser.add_option('--write-model', action='store_true', dest='write_model', default=False,
+                      help='dump generated IP model to file')
+    parser.add_option('--compute-iis', action='store_true', dest='compute_iis', default=False,
+                      help='compute infeasible set')
     parser.add_option('--gen-props-from-actions', action='store_true', dest='gen_props_from_actions', default=False)
     parser.add_option('--cost-file', type='string', dest='cost_file', default=None, help='action cost file')
     parser.add_option('--stat-file', type='string', dest='stat_filename', default=stat_filename_default,
